@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oxanium:wght@300;400&display=swap');
+
+:root {
+    --cor0: #47F4FF;
+    --cor1: #0271F7;
+
+    --font-x-men: "Oxanium", cursive;
+}
+
+body {
+    font-family: var(--font-x-men);
+    background: #000000;
+    color: #fff;
+}
+
+body::before{
+    content: "";
+    background-image: url('../imagens/bg-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    background-position: center center;
+    opacity: 0.2;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+}
+
+.character-selection {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    min-height: calc(100vh - 152px);
+    justify-content: center;
+}
+
+.character-selection .characters-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.character-selection .characters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 585px;
+    gap: 25px;
+}
+
+.character-selection .characters .title {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--cor0);
+    width: 100%;
+    text-align: center;
+}
+
+.characters-list .character img {
+    width: 100%;
+    height: 100%;
+}
+.characters-list .character.selected{
+    box-shadow: 0px 0px 24px 5px var(--cor1);
+}
+.selected-character {
+    text-align: center;
+    max-height: 530px;
+}
+
+.selected-character .big-character{
+    width: 430px;
+    height: 430px;
+}
+
+.selected-character .character-name{
+    border-bottom: 2px solid var(--cor0);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.selected-character .character-description{
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 20px;
+    width: 420px;
+}
